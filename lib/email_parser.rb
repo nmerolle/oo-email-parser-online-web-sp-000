@@ -10,5 +10,10 @@ def initialize(email)
   @email = email
 end
 
-
-end
+def parse 
+    email.split.collect do |address|
+      address.split(',') 
+    end
+    .flatten.uniq 
+  end 
+end 
